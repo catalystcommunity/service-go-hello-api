@@ -1,0 +1,10 @@
+appstore:
+  postgresdb:
+    enabled: true
+    url: "postgres://devdbuser:devdbpass@service-go-hello-api-postgresql.skaffold-service-go-hello-api.svc:5432/devdb?sslmode=disable"
+    # url: "host=service-go-hello-api-postgresql.skaffold-service-go-hello-api.svc port=5432 user=devdbuser password=devdbpass dbname=devdb sslmode=disable"
+postgresql:
+  auth:
+    username: "devdbuser"
+    password: "devdbpass"
+    database: "devdb"
