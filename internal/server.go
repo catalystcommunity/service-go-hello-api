@@ -27,8 +27,8 @@ func GenericHandler[M ApiModel, R ApiModel](apiModel M, retModel R, storeHandler
 }
 
 func RegisterRoutes(router *bunrouter.Router) *bunrouter.Router {
-	helloHandler := GenericHandler(HelloId{}, Hello{}, AppStore.Hello)
-	router.POST("/hello", helloHandler)
+	//helloHandler := GenericHandler(HelloId{}, Hello{}, AppStore.Hello)
+	router.POST("/hello", GenericHandler(HelloId{}, Hello{}, AppStore.Hello))
 	router.POST("/newhello", GenericHandler(NewHello{}, Hello{}, AppStore.CreateHello))
 	return router
 }

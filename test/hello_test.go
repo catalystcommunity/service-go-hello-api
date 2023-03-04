@@ -86,7 +86,7 @@ func deferredDeleteHello(s *HelloSuite, id string) {
 func (s *HelloSuite) TestHelloNotFound() {
 	newUuid, _ := uuid.NewRandom()
 	router := bunrouter.New()
-	router.POST("/hello", HelloHandler)
+	router.POST("/hello", GenericHandler(HelloId{}, Hello{}, AppStore.Hello))
 	req, _ := http.NewRequest("POST", "/hello", jsonByteBuffer(fmt.Sprintf(`{"id": "%s"}`, newUuid.String())))
 	response := executeRequest(router, req)
 
@@ -100,7 +100,7 @@ func (s *HelloSuite) TestHelloNotFound() {
 func (s *HelloSuite) TestHelloCreateAndGet() {
 	subject := "DeleteThisDevTestPerson"
 	router := bunrouter.New()
-	router.POST("/newhello", CreateHelloHandler)
+	router.POST("/newhello", GenericHandler(NewHello{}, Hello{}, AppStore.CreateHello))
 	req := httptest.NewRequest("POST", "/newhello", jsonByteBuffer(fmt.Sprintf(`{"name": "%s"}`, subject)))
 	response := executeRequest(router, req)
 
@@ -114,7 +114,7 @@ func (s *HelloSuite) TestHelloCreateAndGet() {
 	expectedId := hello.Id
 	require.Equal(s.T(), subject, hello.Name, fmt.Sprintf("returned name from CreateHello is incorrect.\nExpected: %s, Returned: %s", subject, hello.Name))
 
-	router.POST("/hello", HelloHandler)
+	router.POST("/hello", GenericHandler(HelloId{}, Hello{}, AppStore.Hello))
 	req, _ = http.NewRequest("POST", "/hello", jsonByteBuffer(fmt.Sprintf(`{"id": "%s"}`, hello.Id)))
 	response = executeRequest(router, req)
 
