@@ -9,7 +9,7 @@ import (
 	"github.com/uptrace/bunrouter"
 )
 
-func GenericHandler[M ApiModel, R ApiModel, S StoreHandler[M, R]](apiModel M, retModel R, storeHandler S) bunrouter.HandlerFunc {
+func GenericHandler[M ApiModel, R ApiModel](apiModel M, retModel R, storeHandler StoreHandler[M, R]) bunrouter.HandlerFunc {
 	retFunc := func(w http.ResponseWriter, req bunrouter.Request) error {
 		err := json.NewDecoder(req.Body).Decode(&apiModel)
 		if err != nil {
