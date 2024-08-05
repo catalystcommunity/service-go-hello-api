@@ -6,7 +6,7 @@ jobs:
   build-push-image:
     runs-on: ubuntu-latest
     steps:
-      - uses: catalystsquad/action-build-push-image-ecr@v1
+      - uses: catalystcommunity/action-build-push-image-ecr@v1
         with:
           aws-access-key-id: ${{ secrets.CICD_AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.CICD_AWS_SECRET_ACCESS_KEY }}

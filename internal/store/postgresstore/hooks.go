@@ -3,7 +3,7 @@ package postgresstore
 import (
 	"context"
 	"fmt"
-	"github.com/catalystsquad/app-utils-go/logging"
+	"github.com/catalystcommunity/app-utils-go/logging"
 	"github.com/sirupsen/logrus"
 	"time"
 )

@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"net/http"
 
-	. "github.com/catalystsquad/service-go-hello-api/internal/store"
-	. "github.com/catalystsquad/service-go-hello-api/internal/store/models"
+	. "github.com/catalystcommunity/service-go-hello-api/internal/store"
+	. "github.com/catalystcommunity/service-go-hello-api/internal/store/models"
 	"github.com/uptrace/bunrouter"
 )
 

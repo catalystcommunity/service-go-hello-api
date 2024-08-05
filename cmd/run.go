@@ -5,17 +5,17 @@ import (
 
 	"net/http"
 
-	"github.com/catalystsquad/app-utils-go/errorutils"
-	"github.com/catalystsquad/app-utils-go/logging"
+	"github.com/catalystcommunity/app-utils-go/errorutils"
+	"github.com/catalystcommunity/app-utils-go/logging"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 	"github.com/uptrace/bunrouter"
 	"github.com/uptrace/bunrouter/extra/reqlog"
 
-	"github.com/catalystsquad/service-go-hello-api/internal"
-	. "github.com/catalystsquad/service-go-hello-api/internal/store"
-	"github.com/catalystsquad/service-go-hello-api/internal/store/postgresstore"
+	"github.com/catalystcommunity/service-go-hello-api/internal"
+	. "github.com/catalystcommunity/service-go-hello-api/internal/store"
+	"github.com/catalystcommunity/service-go-hello-api/internal/store/postgresstore"
 )
 
 // runCmd represents the run command

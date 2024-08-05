@@ -1,9 +1,9 @@
-module github.com/catalystsquad/service-go-hello-api
+module github.com/catalystcommunity/service-go-hello-api
 
 go 1.19
 
 require (
-	github.com/catalystsquad/app-utils-go v1.0.7
+	github.com/catalystcommunity/app-utils-go v1.0.7
 	github.com/google/uuid v1.3.0
 	github.com/lib/pq v1.10.7
 	github.com/pressly/goose/v3 v3.9.0

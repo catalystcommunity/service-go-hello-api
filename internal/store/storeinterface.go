@@ -1,7 +1,7 @@
 package store
 
 import (
-	. "github.com/catalystsquad/service-go-hello-api/internal/store/models"
+	. "github.com/catalystcommunity/service-go-hello-api/internal/store/models"
 )
 
 var AppStore Store

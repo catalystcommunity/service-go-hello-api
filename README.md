@@ -3,7 +3,7 @@ This is the service implementation for the api for hello world
 ## Features
 * Implementation via [Cobra](https://github.com/spf13/cobra)
 * Configuration via [Viper](https://github.com/spf13/viper)
-* Error handling via [the Catalyst Platform Utils library](https://github.com/catalystsquad/app-utils-go) which includes support for sentry
+* Error handling via [the Catalyst Platform Utils library](https://github.com/catalystcommunity/app-utils-go) which includes support for sentry
 * Utilities from catalyst squad such as logging via logrus
 * Command configuration validation via [Go validator](https://github.com/asaskevich/govalidator)
 * Basic skaffold.yaml included

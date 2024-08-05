@@ -6,10 +6,10 @@ import (
 	"embed"
 	"fmt"
 
-	"github.com/catalystsquad/app-utils-go/env"
-	"github.com/catalystsquad/app-utils-go/logging"
-	_ "github.com/catalystsquad/service-go-hello-api/internal/store"
-	. "github.com/catalystsquad/service-go-hello-api/internal/store/models"
+	"github.com/catalystcommunity/app-utils-go/env"
+	"github.com/catalystcommunity/app-utils-go/logging"
+	_ "github.com/catalystcommunity/service-go-hello-api/internal/store"
+	. "github.com/catalystcommunity/service-go-hello-api/internal/store/models"
 	"github.com/google/uuid"
 	"github.com/lib/pq"
 	goose "github.com/pressly/goose/v3"
@@ -17,7 +17,7 @@ import (
 	"github.com/sirupsen/logrus"
 	"github.com/uptrace/bun"
 	"github.com/uptrace/bun/dialect/pgdialect"
-	// "github.com/catalystsquad/service-go-hello-api/cmd/config"
+	// "github.com/catalystcommunity/service-go-hello-api/cmd/config"
 )
 
 // global db
